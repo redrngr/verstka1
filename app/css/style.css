@@ -1,2 +1,87 @@
 
+* { 
+	margin: 0;
+	padding: 0;
+ }
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+h1, h2{ 
+	margin: 30px 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+header {
+	background-image: url('../img/header_puppy.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	height: 930px;
+	overflow: hidden;
+}
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.nav {
+	display: flex;
+	padding: 30px;
+}
+
+.logo {
+	flex: 2;
+}
+
+.logo-url {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	font-size: 1.5rem;
+	color: #f1cdb3;
+}
+
+.logo-subtext {
+	font-family: OpenSans, sans-serif;
+	font-size: 0.8rem;
+}
+.navbar {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: space-around;
+	flex: 2;
+}
+
+.nav-link{
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+}
+
+.nav-link:hover{
+	border-bottom: 3px solid #f1cdb3;
+	padding-bottom: 5px;
+}
+
+.header-info {
+	max-width: 450px;
+	margin-top: 250px;
+}
+
+.button {
+	padding: 10px 25px;
+	border: 1px solid #f1cdb3;
+	border-radius: 50px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+}
+
+.hovered {
+	background-color: #f1cdb3;
+}
+
 
