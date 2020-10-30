@@ -29,6 +29,14 @@ header {
 	height: 820px;
 	overflow: hidden;
 }
+
+footer {
+	background-image: url(../img/footer.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: black;
+	height: 360px;
+}
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -41,13 +49,48 @@ header {
 	margin: 30px auto;
 }
 
-.nav {
+.nav-static {
 	display: flex;
-	padding: 50px 0;
+	padding: 30px 0;
+}
+
+.container-3 {
+	max-width: 960px;
+	margin: 10px auto;
+	display: flex;
+}
+.nav-scroll {
+	position: fixed;
+	top: -70px;
+	width: 100%;
+	height: 70px;
+	background-color: #fafafa;
+	transition: top 0.3s;
+	box-shadow: 0 0 3px -2px rgba(0,0,0,0.4);
 }
 
 .logo {
 	flex: 4;
+}
+
+.logo-scroll-url {
+	color: #545454;
+}
+
+.scroll-item {
+	color: #545454;
+}
+
+.scroll-item a{
+	color: #545454;
+}
+
+.scroll-item a:hover{
+	color: #292929;
+}
+
+.text-color {
+	color: #292929;
 }
 
 .logo-url {
@@ -91,6 +134,7 @@ header {
 .about-info {
 	flex: 2;
 	padding-top: 25px;
+	color: #545454;
 }
 
 .about-img {
@@ -159,13 +203,17 @@ header {
 .card {
 	display: flex;
 	background-color: #f1cdb3;
-	padding: 10px 10px;
+	padding: 5px 20px;
 	border-radius: 10px;
 	color: #292929;
 	width: 260px;
 	align-items: center;
+	letter-spacing: 1px;
 }
 
+.card img {
+	margin-right: 30px;
+}
 
 .donate-info {
 	color: #b2b2b2;
@@ -183,12 +231,27 @@ header {
 	letter-spacing: 1px;
 }
 
-.card {
-	margin-bottom: 10px;
-}
-.card p {
-	color: #292929;
-	letter-spacing: 2px;
-	padding-left: 20px;
+.contact-info {
+	display: flex;
+	color: #f1cdb3;
+	width: 300px;
+	align-items: center;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
 }
 
+.contacts img {
+	margin-right: 15px;
+}
+
+.contacts h2{
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+.container-2 {
+	margin: 0 auto;
+	padding-top: 75px;
+	max-width: 960px;
+	display: flex;
+}

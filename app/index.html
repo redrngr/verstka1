@@ -3,25 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="favicon" type="image/png" href="">
 	<title>Хвостатый Дом</title>
 </head>
 <body>
 	<header>
+		<nav class="nav-scroll" id="nav">
+			<div class="container-3">
+				<div class="logo">
+					<a class="logo-scroll-url" href="/"><h2>Хвостатый дом</h2></a>
+					<p class="logo-subtext text-color">Приют для животных в Арзамасе</p>
+				</div>
+				<ul class="navbar">
+					<li class="scroll-item"><a href="#about" class="nav-link">О приюте</a></li>
+					<li class="scroll-item"><a href="#pets" class="nav-link">Наши питомцы</a></li>
+					<li class="scroll-item"><a href="#help" class="nav-link">Помочь приюту</a></li>
+					<li class="scroll-item"><a href="#contacts" class="nav-link">Контакты</a></li>
+				</ul>
+			</div>
+		</nav>
 		<div class="container">
-			<nav class="nav">
+			<nav class="nav-static">
 				<div class="logo">
 					<a class="logo-url" href="/"><h2>Хвостатый дом</h2></a>
 					<p class="logo-subtext">Приют для животных в Арзамасе</p>
 				</div>
 				<ul class="navbar">
-					<li class="nav-item"><a href="#" class="nav-link">О приюте</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Наши питомцы</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Помочь приюту</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+					<li class="nav-item"><a href="#about" class="nav-link">О приюте</a></li>
+					<li class="nav-item"><a href="#pets" class="nav-link">Наши питомцы</a></li>
+					<li class="nav-item"><a href="#help" class="nav-link">Помочь приюту</a></li>
+					<li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
 				</ul>
 			</nav>
 			<div class="header-info">
@@ -32,8 +44,11 @@
 		</div>
 	</header>
 	<section class="about">
+		<a name="about"></a>
 		<div class="container-1">
-			<div class="about-img"><img src="img/catanddog.png" alt="Кошка и собака" width="250"></div>
+			<div class="about-img">
+				<img src="img/catanddog.png" alt="Кошка и собака" width="250">
+			</div>
 			<div class="about-info">
 				<h2>О приюте<br>"Хвостатый дом"</h2><br>
 	 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur laboriosam odio aliquid voluptatibus necessitatibus at.
@@ -43,53 +58,53 @@
 		</div>
 	</section>
 	<section class="pets">
+		<a name="pets"></a>
 		<div class="container">
 			<h2 class="normal-h">Наши питомцы<br> ищут дом!</h2>
-			<div class="slider">
-	
-			<div>
+			<div class="my-slider">
 				<a href="#" class="button hovered">Познакомиться с остальным</a>
 			</div>
 		</div>	
 	</section>
 	<section class="help">
+		<a name="help"></a>
 		<div class="container">
 			<h2 class="normal-h">Чем вы можете помочь<br> нашему приюту</h2>
 			<div class="flexbox">
 				<div class="help-item">
-					<img src="img/helps/ambulance.png" alt="">
+					<img src="img/SVG/ambulance.svg" alt="Машина" width="60">
 					<h4>Транспортировка</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/ball.png" alt="">
+					<img src="img/SVG/ball.svg" alt="Мячик" width="60">
 					<h4>Игрушки</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/bowl.png" alt="">
-					<h4>Миски</h4>
+					<img src="img/SVG/bowl.svg" alt="Миска" width="60">
+					<h4>Миски и чашки</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/cat-food.png" alt="">
+					<img src="img/SVG/cat-food.svg" alt="Корм" width="60">
 					<h4>Корм для кошек</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/cat.png" alt="">
+					<img src="img/SVG/cat.svg" alt="Домик" width="60">
 					<h4>Домики для кошек</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/leash.png" alt="">
+					<img src="img/SVG/leash.svg" alt="Ошейник" width="60">
 					<h4>Ошейники</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/pills.png" alt="">
-					<h4>Лекарства</h4>
+					<img src="img/SVG/pills.svg" alt="Лекарства" width="60">
+					<h4>Медикаменты</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/shampoo.png" alt="">
+					<img src="img/SVG/shampoo.svg" alt="Шампунь" width="60">
 					<h4>Шампуни</h4>
 				</div>
 				<div class="help-item">
-					<img src="img/helps/syringe.png" alt="">
+					<img src="img/SVG/syringe.svg" alt="Шприц" width="60">
 					<h4>Лечение</h4>
 				</div>
 			</div>
@@ -103,24 +118,37 @@
 			<div class="donate-info">
 				<h2>Так же, Вы можете<br> сделать пожертвование</h2>
 				<h4>Номер банковской карты приюта</h4>
-				<div class="card"><img src="img/credit-card.png" alt="Банковская карта"><p>5336 6901 5652 3252</p></div>
+				<div class="card">
+					<img src="img/SVG/credit-card (1).svg" alt="Банковская карта" width="30">
+					<p>5336 6901 5652 3252</p>
+				</div>
 				<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, voluptas. Nobis minima, doloremque ipsam, odio voluptates libero mollitia maxime, quos tenetur pariatur aliquam eveniet neque sunt, sed? Velit voluptates, enim?</small>
 			</div>
 		</div>
 	</section>
 	<footer>
-		<div class="container">
+		<div class="container-2">
+			<a name="contacts"></a>
 			<div class="contacts">
-				<h4>Есть вопросы или предложения?</h4>
-				<p><i></i>email@tailhouse.ru</p>
-				<p><i></i>+7 910 870 53 56</p>
+				<h2>Пишити нам, <br>если есть вопросы:</h2>
+				<div class="contact-info">
+					<img src="img/SVG/envelope.svg" alt="email" width="40">
+					<p>email@tailhouse.ru</p>
+				</div>
+				<div class="contact-info">
+					<img src="img/SVG/telephone.svg" alt="telephone" width="40">
+					<p>+7 910 870 53 56</p>
+				</div>
 			</div>
 			<div class="contacts">
-				<h4>Мы ждем Вас в гости!</h4>
-				<p><i></i>​Нижегородская область, город Арзамас, улица Лесная 58/3</p>
+				<h2>Мы рады гостям!<br>Наш адрес:</h2>
+				<div class="contact-info">
+					<img src="img/SVG/pin.svg" alt="pin" width="40">
+					<p>Нижегородская обл.<br> Арзамас, улица Лесная 58/3</p>
+				</div>
 			</div>
-			<img src="" alt="Щенок">
 		</div>
 	</footer>
+	<script type="text/javascript" src="js/style.js"></script>
 </body>
 </html>
