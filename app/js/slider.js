@@ -1,23 +1,35 @@
+$(document).ready(function() {
+    init();
+});
+
+function init() {
+    $.post(
+        "core/core.php",
+        {
+            "action" : "init"
+        },
+        showSlider
+    );
+}
+
 function showSlider(data) {
-    let item = JSON.parse(data);
+    let pets = JSON.parse(data);
     let out = '';
-    for (let id in item) {
-        out += `<a class="slider_ref" href="/item#${id}">`;
-        out += `<img src="images/${item[id].image}" width="128">`;
-        out += '</a>';  
+    for (let id in pets) {
+        out += `<div class="petcard">`
+        out += `<img src="img/petscards/${pets[id].img}" width="200">`;
+        out += `<p class="">${pets[id].name}</p>`;
+        out += `<a class="button" href="/pet#${id}">Узнать больше</a>`;
+        out += '</div>';  
     }
     $('#polosa').html(out);
-    $('.slider_ref').click(function () {
-        hash = window.location.hash.substring(1);
-        init(showItem);
-    });
 }
 
 let val = 0;
-document.getElementById('slider_up').onclick = sliderUp;
-document.getElementById('slider_down').onclick = sliderDown;
+document.getElementById('slider_left').onclick = sliderLeft;
+document.getElementById('slider_right').onclick = sliderRight;
 
-function sliderUp() {
+function sliderLeft() {
     let polosa = document.getElementById('polosa');
     if (val > -512) {
         val -= 128;
@@ -25,7 +37,7 @@ function sliderUp() {
     polosa.style.top = val + 'px';
 }
 
-function sliderDown() {
+function sliderRight() {
     let polosa = document.getElementById('polosa');
     if (val < 384) {
         val += 128;

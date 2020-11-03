@@ -2,13 +2,13 @@
 function connect($server, $login, $pass, $table) {
 	$conn = mysqli_connect($server, $login, $pass, $table);
 	if (!$conn) {
-		die("Connect failed ".mysql_connect_error());
+		die("Connect failed ".mysqli_connect_error());
 	}
 	return $conn;
 }
 
 function init() {
-	$conn = connect("verstka1", "root", "root", "pets_db");
+	$conn = connect("localhost", "root", "root", "pets_db");
 	$sql = "SELECT * FROM pets";
 	$result = mysqli_query($conn, $sql);
 	if (mysqli_num_rows($result) > 0) {
@@ -48,7 +48,7 @@ function updateItems() {
 	$inoc = $_POST['iinoc'];
 	$dis = $_POST['idis'];
 	$per = $_POST['iper'];
-	$sql = "UPDATE pets SET name = '$name', image = '$img', breed = '$breed', description = '$desc', age = '$age', inoculation = '$inoc', diseases = '$dis', peresites = '$per'  WHERE id = '$id' ";
+	$sql = "UPDATE pets SET name = '$name', img = '$img', breed = '$breed', description = '$desc', age = '$age', inoculation = '$inoc', diseases = '$dis', peresites = '$per'  WHERE id = '$id' ";
 	if (mysqli_query($conn, $sql)) {
 		echo 1;
 	} else {
@@ -75,7 +75,7 @@ function writeJSON() {
 }
 
 function newItems() {
-	$conn = connect("127.0.0.1", "root@localhost", "root", "pets_db");
+	$conn = connect("localhost", "root", "root", "pets_db");
 	$id = $_POST['id'];
 	$name = $_POST['iname'];
 	$img = $_POST['iimg'];

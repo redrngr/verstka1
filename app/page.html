@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="favicon" type="image/png" href="">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="favicon" type="image/svg" href="img/SVG/">
 	<title>Хвостатый Дом</title>
 </head>
 <body>
@@ -62,8 +64,13 @@
 		<div class="container">
 			<h2 class="normal-h">Наши питомцы<br> ищут дом!</h2>
 			<div class="my-slider">
-				<a href="#" class="button hovered">Познакомиться с остальным</a>
+				<button class="slider_btn" id="slider_left"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></button>
+				<div class="slider">
+					<div id="polosa" class="polosa"></div>
+				</div>
+				<button class="slider_btn" id="slider_right"><i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i></button>
 			</div>
+			<a href="#" class="button hovered">Познакомиться с остальным</a>
 		</div>	
 	</section>
 	<section class="help">
@@ -149,6 +156,8 @@
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="core/js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/style.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
 </body>
 </html>

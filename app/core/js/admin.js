@@ -25,7 +25,7 @@ function showItems(data) {
 function selectItems() {
 	let id = $('.items_out select option:selected').attr('data-id');
 	$.post(
-		"../core.php",
+		"core/core.php",
 		{
 			"action" : "selectItem",
 			"iid" : id
@@ -34,7 +34,7 @@ function selectItems() {
 			data = JSON.parse(data);
 			$('#iid').val(data.id);
 			$('#iname').val(data.name);
-			$('#iimg').val(data.image);
+			$('#iimg').val(data.img);
 			$('#ibreed').val(data.breed);
 			$('#idesc').val(data.description);
 			$('#iage').val(data.age);
@@ -49,7 +49,7 @@ function saveToDb() {
 	let id = $('#iid').val();
 	if (id != "") {
 		$.post(
-		"core.php",
+		"core/core.php",
 		{
 			"action" : "updateItems",
 			"id" : id,
@@ -72,7 +72,7 @@ function saveToDb() {
 		})
 	} else {
 		$.post(
-		"core.php",
+		"core/core.php",
 		{
 			"action" : "newItems",
 			"id" : 0,
