@@ -1,5 +1,7 @@
 .my-slider {
 	display: flex;
+	align-items: center;
+	position: static;
 }
 
 .slider {
@@ -8,16 +10,29 @@
 
 .polosa {
 	display: flex;
+	position: relative;
+	left: 0px;
 	transition: all ease 1s;
 	max-width: 880px;
+	margin-bottom: 30px;
 }
 
 .petcard {
-	display: flex;
-	margin: 0 20px;
+	margin: 0 22px;
 	padding-top: 20px;
-	height: 300px;
+	min-width: 250px;
+	height: 320px;
 	background-color: #fafafa;
+	box-shadow: 0 0 3px -2px rgba(0,0,0,0.4);
+}
+
+.grey {
+	font-family: Georgia, sans-serif;
+	color: #292929;
+}
+
+.margin-btn {
+	margin-top: 20px;
 }
 
 .slider_btn {

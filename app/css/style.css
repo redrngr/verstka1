@@ -160,10 +160,15 @@ footer {
 	background-color: #f1cdb3;
 }
 
+.hovered:hover {
+	background-color: #f5e1d2;
+}
+
+
 .pets {
 	background-color: #f6f6f6;
 	text-align: center;
-	height: 680px;
+	height: 730px;
 }
 
 .pets h2{

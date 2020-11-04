@@ -17,30 +17,31 @@ function showSlider(data) {
     let out = '';
     for (let id in pets) {
         out += `<div class="petcard">`
-        out += `<img src="img/petscards/${pets[id].img}" width="200">`;
-        out += `<p class="">${pets[id].name}</p>`;
+        out += `<img src="img/petscards/${pets[id].img}" width="226">`;
+        out += `<p class="grey">${pets[id].name}</p>`;
+        out += `<div class="margin-btn">`
         out += `<a class="button" href="/pet#${id}">Узнать больше</a>`;
-        out += '</div>';  
+        out += '</div></div>';  
     }
     $('#polosa').html(out);
 }
 
 let val = 0;
-document.getElementById('slider_left').onclick = sliderLeft;
-document.getElementById('slider_right').onclick = sliderRight;
+document.getElementById('slider_left').onclick = sliderRight;
+document.getElementById('slider_right').onclick = sliderLeft;
 
 function sliderLeft() {
     let polosa = document.getElementById('polosa');
-    if (val > -512) {
-        val -= 128;
+    if (val > -1470) {
+        val -= 294;
     }
-    polosa.style.top = val + 'px';
+    polosa.style.left = val + 'px';
 }
 
 function sliderRight() {
     let polosa = document.getElementById('polosa');
-    if (val < 384) {
-        val += 128;
+    polosa.style.left = val + 'px';
+    if (val < 0) {
+        val += 294;
     }
-    polosa.style.top = val + 'px';
 }
