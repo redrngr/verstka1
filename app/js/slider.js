@@ -16,14 +16,23 @@ function showSlider(data) {
     let pets = JSON.parse(data);
     let out = '';
     for (let id in pets) {
-        out += `<div class="petcard">`
+        out += `<div class="petcard">`;
         out += `<img src="img/petscards/${pets[id].img}" width="226">`;
         out += `<p class="grey">${pets[id].name}</p>`;
-        out += `<div class="margin-btn">`
-        out += `<a class="button" href="/pet#${id}">Узнать больше</a>`;
+        out += `<div class="margin-btn">`;
+        out += `<a class="button modal-ref" href="#openModal" data-id="${id}">Узнать больше</a>`;
         out += '</div></div>';  
     }
     $('#polosa').html(out);
+    out = '';
+    for (let id in pets) {
+        out += `<div class="modal-content">`;
+        out += `<img src="img/petscards/${pets[id].img}" width="226">`;
+        out += `<p class="grey">${pets[id].name}</p>`;
+        out += `<a href="#close" title="Close" class="close">×</a>`;
+        out += '</div>';  
+    }
+    $('.modal-dialog').html(out);
 }
 
 let val = 0;
@@ -45,3 +54,5 @@ function sliderRight() {
         val += 294;
     }
 }
+
+// Модальное окно
