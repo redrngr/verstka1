@@ -15,24 +15,28 @@ function init() {
 function showSlider(data) {
     let pets = JSON.parse(data);
     let out = '';
+    let out2 = '';
     for (let id in pets) {
         out += `<div class="petcard">`;
         out += `<img src="img/petscards/${pets[id].img}" width="226">`;
         out += `<p class="grey">${pets[id].name}</p>`;
         out += `<div class="margin-btn">`;
         out += `<a class="button modal-ref" href="#openModal" data-id="${id}">Узнать больше</a>`;
-        out += '</div></div>';  
+        out += '</div></div>'; 
+        out2 += `<div class="modal-content"><div class="modal-img">`;
+        out2 += `<img src="img/petscards/${pets[id].img}" width="226"></div>`;
+        out2 += `<div class="modal-body">`;
+        out2 += `<h2>${pets[id].name}</h2>`;
+        out2 += `<h3>${pets[id].breed}</h3>`;
+        out2 += `<p>${pets[id].description}</p>`;
+        out2 += `<ul><li>Возраст: ${pets[id].age}</li>`;
+        out2 += `<li>Прививки: ${pets[id].inoculation}</li>`;
+        out2 += `<li>Заболевания: ${pets[id].diseases}</li>`;
+        out2 += `<li>Паразиты: ${pets[id].peresites}</li></ul>`;
+        out2 += `</div></div>`;
     }
     $('#polosa').html(out);
-    out = '';
-    for (let id in pets) {
-        out += `<div class="modal-content">`;
-        out += `<img src="img/petscards/${pets[id].img}" width="226">`;
-        out += `<p class="grey">${pets[id].name}</p>`;
-        out += `<a href="#close" title="Close" class="close">×</a>`;
-        out += '</div>';  
-    }
-    $('.modal-dialog').html(out);
+    $('.modal-dialog').html(out2);  
 }
 
 let val = 0;
@@ -54,5 +58,3 @@ function sliderRight() {
         val += 294;
     }
 }
-
-// Модальное окно
