@@ -1,4 +1,3 @@
-@import url("fonts.css");
 @import url("slider.css");
 
 * { 
@@ -37,6 +36,7 @@ footer {
 	background-position: center;
 	background-color: black;
 	height: 360px;
+	padding: 0 15px;
 }
 .container {
 	max-width: 960px;
@@ -166,7 +166,8 @@ footer {
 .pets {
 	background-color: #f6f6f6;
 	text-align: center;
-	height: 700px;
+	min-height: 700px;
+	padding-bottom: 75px;
 }
 
 
@@ -272,4 +273,99 @@ footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+}
+
+/*Кнопка Меню*/
+
+.nav-toggle {
+	display: none;
+	position: relative;
+	width: 40px;
+	height: 40px;
+/*	margin-right: 15px;*/
+	cursor: pointer;
+}
+
+.nav-toggle span {
+	display: block;
+	position: absolute;
+	top: 24px;
+	left: 8px;
+	right: 8px;
+	height: 2px;
+	background: #f1cdb3;
+}
+
+.nav-toggle span:before, .nav-toggle span:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #f1cdb3;
+}
+
+.nav-toggle span:before {
+	top: -10px;
+}
+
+.nav-toggle span:after {
+	bottom: -10px;
+}
+
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu.active {
+	max-height: 123px;
+}
+
+/*Медиа-запросы*/
+
+@media (max-width: 768px) {
+/* показываем кнопку для переключения верхней навигации */
+	.logo {
+		margin-left: 20px;
+	}
+	.nav-toggle {
+		display: block;
+	}
+	/* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */ 
+	#menu {
+		max-height: 0;
+		background: white;
+		float: none;
+		position: absolute;
+		overflow: hidden;
+		margin: 0 20px;
+		padding: 0;
+		z-index: 3;
+	}
+	/* делаем элементы списка блочными, чтобы они располагались друг под другом */
+	#menu li {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;	
+		flex-direction: column;
+		text-align: center;
+		border-bottom: 1px solid #f1cdb3;
+		margin-right: 0;
+	}
+
+/*	.header-info {
+		margin-left: 15px;
+	}*/
+}
+
+@media (max-width: 480px) {
+	/* отменяем обтекание для логотипа и выравниваем по центру*/
+	.logo {
+		margin: 0 15px;
+	}
+	.logo span {
+		margin: 0 2px;
+	}
+	/* позиционируем меню на увеличившуюся высоту шапки */
+	#menu {
+		top: 70px;
+	}
 }

@@ -7,3 +7,8 @@ function scrollFunction() {
     document.getElementById("nav").style.top = "-70px";
   }
 } 
+
+
+$('.nav-toggle').on('click', function(){
+  $('#menu').toggleClass('active');
+});

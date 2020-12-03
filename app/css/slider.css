@@ -12,7 +12,7 @@
 	overflow: hidden;
 }
 
-.polosa {
+.slider .polosa {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -25,8 +25,18 @@
 	margin-bottom: 30px;
 }
 
+.allpets .polosa {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	max-width: 882px;
+}
+
 .petcard {
-	margin: 0 22px;
+	margin: 22px;
 	padding-top: 20px;
 	min-width: 250px;
 	height: 320px;
